@@ -12,18 +12,18 @@ npm i very-simple-pagination-vue --save
 ```
 
 ### How to use
-```
+```javascript
 <template>
-  <Pager v-bind:activePage="currentPage" v-bind:total="total" v-bind:perPage="perPage" v-bind:color="'#f00'"/>
+  <Pagination v-bind:activePage="currentPage" v-bind:total="total" v-bind:perPage="perPage" v-bind:color="'#f00'"/>
 </template>
 
 <script>
-import Pager from './components/pagination.vue'
+import Components  from 'v-simple-pagination';
 
 export default {
   name: 'app',
   components: {
-    Pager
+    Components
   },
    data() {
     return {
