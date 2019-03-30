@@ -1,5 +1,5 @@
 <template>
-  <Pager v-bind:activePage="currentPage" v-bind:total="total" v-bind:perPage="perPage" v-bind:color="'#f00'"/>
+  <Pager v-on:pageChanged="doSomething" v-bind:activePage="currentPage" v-bind:total="total" v-bind:perPage="perPage" v-bind:color="'#f00'"/>
 </template>
 
 <script>
@@ -16,6 +16,11 @@ export default {
       total: 101,
       perPage: 10
     };
+  },
+  methods: {
+    doSomething: function(page) {
+      console.log(page);
+    }
   }
 }
 </script>

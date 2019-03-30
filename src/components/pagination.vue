@@ -75,6 +75,7 @@ export default {
      if(value === 'last-half'){
         this.current +=Math.ceil((this.Pages.last - this.Pages.to) / 2); 
      }
+      this.$emit('pageChanged', this.current);
     }
   }
 };
