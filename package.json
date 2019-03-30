@@ -1,10 +1,10 @@
 {
-  "name": "vue-pagination-library",
-  "version": "0.1.0",
-  "private": true,
+  "name": "very-simple-pagination-vue",
+  "version": "0.0.2",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-bundle":"vue-cli-service build --target lib --name simple ./src/components/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -42,5 +42,9 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
+  ],
+  "main":"./dist/simple.common.js",
+  "files":[
+    "dist/*","src/*","public/*","*.json","*.js"
   ]
 }

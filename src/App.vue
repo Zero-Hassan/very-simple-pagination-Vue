@@ -1,17 +1,21 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <Pager v-bind:activePage="currentPage" v-bind:total="total" v-bind:perPage="perPage" v-bind:color="'#f00'"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Pager from './components/pagination.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Pager
+  },
+   data() {
+    return {
+      currentPage: 6,
+      total: 101,
+      perPage: 10
+    };
   }
 }
 </script>
@@ -22,7 +26,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
 }
 </style>
