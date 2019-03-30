@@ -1,29 +1,39 @@
-# vue-pagination-library
+# very-simple-pagination-Vue
 
-## Project setup
-```
-npm install
-```
+## Description
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+it is an easy pagination vue components to implement and to use. just by passing a total of pages, items per page,  color(default '#2c3e50') and current active page (default 1).
+when the user click some page, it reander the comonent vue then send an event to parent component with  the clicked page, so the parent should look for content from a REST-API, server, array ....;
+  
 
-### Compiles and minifies for production
+### Instalation
 ```
-npm run build
+npm i very-simple-pagination-vue --save
 ```
 
-### Run your tests
+### How to use
 ```
-npm run test
+<template>
+  <Pager v-bind:activePage="currentPage" v-bind:total="total" v-bind:perPage="perPage" v-bind:color="'#f00'"/>
+</template>
+
+<script>
+import Pager from './components/pagination.vue'
+
+export default {
+  name: 'app',
+  components: {
+    Pager
+  },
+   data() {
+    return {
+      currentPage: 6,
+      total: 101,
+      perPage: 10
+    };
+  }
+}
+</script>
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
